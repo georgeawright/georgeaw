@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title === 'George Alexander Wright' ? title : `${title} | George Alexander Wright`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description ?? 'George Alexander Wright — computer science researcher and engineer.'} />
+    <link rel="icon" href="data:," />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <a class="site-name" href="/">George Alexander Wright</a>
+        <div class="nav-links">
+          <a href="/cv/">CV</a>
+          <a href="/publications/">Publications</a>
+          <a href="/blog/">Blog</a>
+        </div>
+      </nav>
+    </header>
+    <main><slot /></main>
+  </body>
+</html>
