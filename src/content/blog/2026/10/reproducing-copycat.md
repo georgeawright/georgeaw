@@ -1,6 +1,6 @@
 ---
 title: "Reproducing Copycat: a Python Re-implementation of a Classic Model of Analogy-Making"
-description: A tested Python reproduction of Copycat, a classic model of analogy-making.
+description: A Python reproduction of Copycat, the FARG classic model of analogy-making.
 pubDate: 2026-10-12
 ---
 
